@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abro Fitness World</title>
+    <style>
+        /* General */
+        body{
+            margin:0;
+            font-family: Arial, sans-serif;
+            background: #111;
+            color: #fff;
+        }
+
+        a{
+            text-decoration:none;
+        }
+
+        /* Header */
+        header{
+            background: #595c5c;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1{
+            color: #e9e9e8;
+            margin:0;
+        }
+
+        nav a{
+            color:#fff;
+            margin:0 15px;
+            text-decoration:none;
+            font-weight:bold;
+        }
+
+        /* Hero Section */
+        .hero{
+            height: 100vh; /* Full screen height */
+            min-height: 400px;
+            background: url('images/Gym_12.23-19.webp') center/cover no-repeat;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align:center;
+            position: relative;
+        }
+
+        .hero::before{
+            content:"";
+            position: absolute;
+            inset:0;
+            background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+        }
+
+        .hero h2{
+            font-size: 42px;
+            margin:0;
+            position: relative;
+            color:#fff;
+        }
+
+        .hero p{
+            position: relative;
+            color:#fff;
+        }
+
+        .hero .btn{
+            padding: 12px 25px;
+            background: #f44336;
+            color:#fff;
+            text-decoration:none;
+            border-radius:5px;
+            font-weight:bold;
+            margin-top:15px;
+            position: relative;
+            transition:0.3s;
+        }
+
+        .hero .btn:hover{
+            background:#ff2c1f;
+            transform: scale(1.05);
+        }
+
+        /* Plans Section */
+        .section{
+            padding:50px 20px;
+            text-align:center;
+        }
+
+        .plans{
+            display:flex;
+            flex-wrap:wrap;
+            justify-content:center;
+            gap:20px;
+        }
+
+        .plan{
+            background:#222;
+            padding:30px;
+            width:280px;
+            border-radius:10px;
+            transition:0.3s;
+        }
+
+        .plan:hover{
+            transform: translateY(-10px);
+        }
+
+        .plan h3{
+            color:#f44336;
+        }
+
+        .plan button{
+            background:#f44336;
+            border:none;
+            padding:10px 20px;
+            color:white;
+            cursor:pointer;
+            margin-top:15px;
+            border-radius:5px;
+        }
+
+        .plan button:hover{
+            background:#ff2c1f;
+        }
+
+        /* Free Trial Form */
+        .form-section{
+            background:#000;
+            padding:50px 20px;
+            text-align:center;
+        }
+
+        .form-section h2{
+            margin-bottom:30px;
+        }
+
+        .form-box{
+            max-width:400px;
+            margin:auto;
+            background:#222;
+            padding:25px;
+            border-radius:10px;
+        }
+
+        .form-box input{
+            width:100%;
+            padding:12px;
+            margin:10px 0;
+            border:none;
+            border-radius:5px;
+        }
+
+        .form-box button{
+            width:100%;
+            padding:12px;
+            background:#f44336;
+            color:#fff;
+            border:none;
+            cursor:pointer;
+            font-size:16px;
+            border-radius:5px;
+            transition:0.3s;
+        }
+
+        .form-box button:hover{
+            background:#ff2c1f;
+        }
+
+        /* Footer */
+        footer{
+            background:#000;
+            text-align:center;
+            padding:15px;
+        }
+
+        /* Responsive */
+        @media(max-width:768px){
+            .hero h2{
+                font-size:32px;
+            }
+
+            .plans{
+                flex-direction:column;
+                align-items:center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Abro Fitness World</h1>
+    <nav>
+      <a href="#home">Home</a>
+    <a href="#trial">Free Trial</a>
+     <a href="#plans">Plans</a>
+</nav>
+</header>
+
+<section class="hero" id="home">
+    <h2>Transform Your Body With Us</h2>
+    <p>Join Abro Fitness World Today</p>
+    <a href="#trial" class="btn">Join Now</a>
+</section>
+
+<section class="section" id="plans">
+    <h2>Our Plans</h2>
+    <div class="plans">
+        <div class="plan">
+            <h3>Basic Plan</h3>
+            <p>₹999 / Month</p>
+            <p>Gym Access</p>
+            <button>Select Plan</button>
+        </div>
+        <div class="plan">
+            <h3>Standard Plan</h3>
+            <p>₹1999 / Month</p>
+            <p>Gym + Cardio + Trainer</p>
+            <button>Select Plan</button>
+        </div>
+        <div class="plan">
+            <h3>Premium Plan</h3>
+            <p>₹2999 / Month</p>
+            <p>All Access + Personal Trainer</p>
+            <button>Select Plan</button>
+        </div>
+    </div>
+</section>
+
+<section class="form-section" id="trial">
+    <h2>Start Your Free Trial</h2>
+    <div class="form-box">
+        <form id="trialForm">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="tel" name="phone" placeholder="Phone Number" required>
+            <input type="email" name="email" placeholder="Email Address" required>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</section> </div>
+<section class="owner-section">
+    <h2>Owner Information</h2>
+    <p><strong>Name:</strong> Zain Abro Khan</p>
+    <p><strong>Designation:</strong> Founder & Head Trainer</p>
+    <p><strong>Phone:</strong>03233210085</p>
+    <p><strong>Email:</strong> fitnesszain001@gmail.com</p>
+</section>
+<footer><footer>
+</footer>
+</footer>
+
+<script>
+document.getElementById("trialForm").addEventListener("submit"), function(e){
+    e.preventDefault();
+    let name = this.name.value;
+    let phone = this.phone.value;
+    let email = this.email.value;
+
+    let message = `Hi Abro Fitness World,%0AName: ${name}%0APhone: ${phone}%0AEmail: ${email}`;
+    window.open("https://wa.me/923001234567?text=" + message, "_blank");
+}
+</script>
+<section class="section" id="owner">
+    <h2>Message From Owner</h2>
+    <div class="owner-message">
+        <img src="https://images.unsplash.com/photo-1594737625785-cf7a1f7a8a95" alt="Owner">
+        </div>
+            <h3>Zain Abro</h3>
+            <p>
+                Welcome to Abro Fitness World. Our mission is to help you
+                achieve your fitness goals with professional guidance,
+                modern equipment, and a supportive environment.
+            </p>
+            <p><strong>Contact:</strong>03233210085
+            | fitnesszain001@gmail.com</p>
+        </div>
+    </div>
+</section>
+<footer>
+    <p> © 2026 <strong>Abro Fitness World</strong>. All Rights Reserved.</p>
+</footer>
+</body>
+</html>
